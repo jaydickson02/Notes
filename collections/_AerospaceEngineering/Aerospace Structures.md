@@ -256,11 +256,11 @@ $$
   - Analytical derivation of buckling not considered here
 - A rectangular plate in shear develops a series of closely space buckling waves at approximately 45 degrees
 - The effect of boundary conditions and plate size is similar to that of a plate in compression.
-![Plates in Shear.png](AerospaceStructuresMedia/ec0b59c5-e658-4b0b-bb6f-7d4af81e56c7--Plates%20in%20Shear.png)
+![Plates in Shear.png](https://supernotes-resources.s3.amazonaws.com/image-uploads/ec0b59c5-e658-4b0b-bb6f-7d4af81e56c7--Plates%20in%20Shear.png)
 - We use a different graph to obtain our K values but the process is the same from a calculation standpoint.
 - **In shear buckling the b in the equation is always the smaller dimension**
 - $\sigma_{cr} = {KE  ({t \over b})^2}$
-![Shear k.png](AerospaceStructuresMedia/fe508ed6-7ee9-4c97-a894-9300bf3580f2--Shear%20k.png)
+![Shear k.png](https://supernotes-resources.s3.amazonaws.com/image-uploads/fe508ed6-7ee9-4c97-a894-9300bf3580f2--Shear%20k.png)
 
 ## Rectangular Plates in Compression
 
