@@ -113,14 +113,17 @@ $$
   -  $u_2 - u_1 = \delta$
   - The element is static and so the sum of forces is zero hence $f_1 =-f_2$
   - **So, Force**:
+
    $$f_2 = k(u_2 - u_1) \\ f_1 = -k(u_2 - u_1)$$
   
 - Matrix form:
+
 $$
- k \cdot u_1  - k \cdot u_2= f_1 \\
-- k \cdot u_1 + k \cdot u_2  = f_2 
+ k \cdot u_1  - k \cdot u_2= f_1 \\ - k \cdot u_1 + k \cdot u_2  = f_2 
 $$
+
 gives,
+
 $$
 \begin{bmatrix}
   k & -k \\
@@ -137,6 +140,7 @@ $$
 \end{bmatrix} 
 \Rightarrow K^e .u^e = f^e
 $$
+
 e is the element number. So what part of the structure we are considering. We have to calculate this for each element in the structure to get  a full picture.
 
 - K: Element stiffness matrix, u: displacement vector, f: force vector
