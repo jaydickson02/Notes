@@ -21,19 +21,21 @@
 title: Notes
 email: jaydickson02@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-url: jaydickson02.github.io
+  This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations.
 baseurl: /notes
-twitter_username: jekyllrb
-github_username:  jekyll
+url: jaydickson02.github.io
+twitter_username: rubbergoldfsh
+github_username:  jaydickson02
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-toc
 markdown: kramdown
+    
+kramdown:
+  parse_block_html: true
 
 collections_dir: collections
 
@@ -47,6 +49,7 @@ defaults:
       type: "AerospaceEngineering"
     values:
       layout: "post"
+      toc: true
 
 
 # Exclude from processing.
