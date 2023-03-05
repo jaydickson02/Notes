@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Computational and High-Speed Aerodynamics | Notes</title>
-<meta name="generator" content="Jekyll v3.9.3" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Computational and High-Speed Aerodynamics" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta name="description" content="Lecture 1 - Review of Aerodynamic Concepts" />
+<meta property="og:description" content="Lecture 1 - Review of Aerodynamic Concepts" />
 <link rel="canonical" href="http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html" />
 <meta property="og:url" content="http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html" />
 <meta property="og:site_name" content="Notes" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-05T23:07:34+11:00" />
+<meta property="article:published_time" content="2023-03-06T01:11:55+11:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Computational and High-Speed Aerodynamics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-05T23:07:34+11:00","datePublished":"2023-03-05T23:07:34+11:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Computational and High-Speed Aerodynamics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-06T01:11:55+11:00","datePublished":"2023-03-06T01:11:55+11:00","description":"Lecture 1 - Review of Aerodynamic Concepts","headline":"Computational and High-Speed Aerodynamics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/notes/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/notes/feed.xml" title="Notes" /></head>
 <body><header class="site-header" role="banner">
@@ -32,7 +32,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/notes/about/">About</a></div>
+        <div class="trigger"></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -43,12 +43,98 @@
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <h1 class="post-title p-name" itemprop="name headline">Computational and High-Speed Aerodynamics</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="" itemprop="datePublished">
+      <time class="dt-published" datetime="2023-03-06T01:11:55+11:00" itemprop="datePublished">Mar 6, 2023
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#lecture-1---review-of-aerodynamic-concepts">Lecture 1 - Review of Aerodynamic Concepts</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#physical-quantities">Physical Quantities</a></li>
+<li class="toc-entry toc-h2"><a href="#properties-of-a-fluid">Properties of a Fluid</a></li>
+<li class="toc-entry toc-h2"><a href="#dimensional-analysis">Dimensional Analysis</a></li>
+<li class="toc-entry toc-h2"><a href="#table-test">Table Test</a></li>
+</ul>
+</li>
+</ul><h1 id="lecture-1---review-of-aerodynamic-concepts">
+<a class="anchor" href="#lecture-1---review-of-aerodynamic-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lecture 1 - Review of Aerodynamic Concepts</h1>
+
+<h2 id="physical-quantities">
+<a class="anchor" href="#physical-quantities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Physical Quantities</h2>
+
+<ul>
+  <li>Every physical quantity can be expressed in terms of 4 fundamental properties
+    <ul>
+      <li>Mass (m)</li>
+      <li>Length (L)</li>
+      <li>Time (t)</li>
+      <li>Temperature (T)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="properties-of-a-fluid">
+<a class="anchor" href="#properties-of-a-fluid" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties of a Fluid</h2>
+<ul>
+  <li>Density</li>
+  <li>Viscosity
+    <ul>
+      <li>No-Slip Condition</li>
+      <li>Gives rise to most important aerodynamic concepts</li>
+    </ul>
+  </li>
+  <li>Pressure
+    <ul>
+      <li>Normal force</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="dimensional-analysis">
+<a class="anchor" href="#dimensional-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dimensional Analysis</h2>
+<ul>
+  <li>We often have to rely on experiments to determine the answers</li>
+  <li>We use dimensional analysis to reduce the number of variables we need to experimentally consider.</li>
+</ul>
+
+<h2 id="table-test">
+<a class="anchor" href="#table-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table Test</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+      <th>d</th>
+      <th>e</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>f</td>
+      <td>g</td>
+      <td>h</td>
+      <td>i</td>
+      <td>j</td>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>s</td>
+      <td>f</td>
+      <td>g</td>
+      <td>h</td>
+    </tr>
+    <tr>
+      <td>s</td>
+      <td>d</td>
+      <td>g</td>
+      <td>h</td>
+      <td>j</td>
+    </tr>
+  </tbody>
+</table>
 
   </div><a class="u-url" href="/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html" hidden></a>
 </article>
@@ -67,11 +153,11 @@
           <li class="p-name">Notes</li><li><a class="u-email" href="mailto:jaydickson02@gmail.com">jaydickson02@gmail.com</a></li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/notes/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/notes/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jaydickson02"><svg class="svg-icon"><use xlink:href="/notes/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jaydickson02</span></a></li><li><a href="https://www.twitter.com/rubbergoldfsh"><svg class="svg-icon"><use xlink:href="/notes/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">rubbergoldfsh</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+        <p>This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations.</p>
       </div>
     </div>
 

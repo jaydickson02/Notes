@@ -1,6 +1,14 @@
 ---
-
-title:  "Advanced Mathematics for Engineers"
-year: "2020 Sem 1"
-
+layout: post
+title:  "Advanced Mathmatics for Engineers"
+toc: true
 ---
+
+# Test
+
+## Test
+
+### Test
+
+# Test 2
+
