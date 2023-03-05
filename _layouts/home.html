@@ -1,0 +1,152 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.AerospaceEngineering.size > 0 -%}
+
+        <h2 class="post-list-heading">{{ page.list_title | default: "Aerospace Engineering" }}</h2>
+
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>Semester 1</th> 
+            <th>Semester 2</th>
+        </tr>
+        <tr>
+            <td rowspan="4">2020</td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Mechanics and Materials 1.html">
+                Mechanics and Materials 1 (2010)
+            </a></td> 
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Introduction to Aircraft.html">
+                Introduction to Aircraft (2050)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Introduction to Professional Engineering Practice.html">
+                Introduction to Professional Engineering Practice (2010)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Further Engineering Mathematics C.html">
+                Further Engineering Mathematics C (2050)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Engineering Mathematics C.html">
+                Engineering Mathematics C (2010)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Fluid Mechanics of Mechanical Systems.html">
+                Fluid Mechanics of Mechanical Systems (2050)
+            </a></td>
+        </tr>
+        <tr>
+            <td>Placeholder</td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Creative Engineering CAD.html">
+                Creative Engineering CAD (2050)
+            </a></td>
+        </tr>
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td rowspan="4">2021</td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Principles of Aerodynamics.html">
+                Principles of Aerodynamics (2110)
+            </a></td> 
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Systems Engineering.html">
+                Systems Engineering (2150)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Mechanics and Materials 2.html">
+                Mechanics and Materials 2 (2110)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Flight Mechanics.html">
+                Flight Mechanics (2150)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Dynamics.html">
+                Dynamics (2110)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Design for Manufacture and Assembly.html">
+                Design for Manufacture and Assembly (2150)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Advanced Mathematics for Engineers.html">
+                Advanced Mathematics for Engineers (2110)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Applied Thermodynamics.html">
+                Applied Thermodynamics (2150)
+            </a></td>
+        </tr>
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        
+        <tr>
+            <td rowspan="3">2022</td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Aerospace Structures.html">
+                Aerospace Structures (2210)
+            </a></td> 
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Research Methods for Engineers.html">
+                Research Methods for Engineers (2250)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Aerospace Propulsion.html">
+                Aerospace Propulsion (2210)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Aerospace Finite Element Methods.html">
+                Aerospace Finite Element Methods (2250)
+            </a></td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Aerospace Dynamics and Control.html">
+                Aerospace Dynamics and Control (2210)
+            </a></td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Aerospace Design Principles.html">
+                Aerospace Design Principles (2250)
+            </a></td>
+        </tr>
+
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">2023</td>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Engineering Capstone Project Part A.html">
+                Engineering Capstone Project Part A (2310)
+            </a></td> 
+            <td>Placeholder</td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Computational and High-Speed Aerodynamics.html">
+                Computational and High-Speed Aerodynamics (2310)
+            </a></td>
+            <td>Placeholder</td>
+        </tr>
+        <tr>
+            <td><a style="font-size: medium;" href="AerospaceEngineering/Aerospace Design Project.html">
+                Aerospace Design Project (2310)
+            </a></td>
+            <td>Placeholder</td>
+        </tr>
+    </table>
+
+  {%- endif -%}
+
+
+
+
+</div>
