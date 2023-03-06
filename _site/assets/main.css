@@ -782,7 +782,8 @@ table .spacer {
 
 .projectlist {
   list-style: none; /* Remove default bullets */
-  margin-left: 0;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .projectlist a {
   color: var(--main-text-color) !important;
