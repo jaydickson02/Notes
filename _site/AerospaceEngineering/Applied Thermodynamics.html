@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Applied Thermodynamics" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations." />
-<meta property="og:description" content="This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations." />
+<meta name="description" content="Enthalpy" />
+<meta property="og:description" content="Enthalpy" />
 <link rel="canonical" href="http://localhost:4000/notes/AerospaceEngineering/Applied%20Thermodynamics.html" />
 <meta property="og:url" content="http://localhost:4000/notes/AerospaceEngineering/Applied%20Thermodynamics.html" />
 <meta property="og:site_name" content="Notes" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-06T01:14:54+11:00" />
+<meta property="article:published_time" content="2023-03-06T12:57:14+11:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Applied Thermodynamics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-06T01:14:54+11:00","datePublished":"2023-03-06T01:14:54+11:00","description":"This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations.","headline":"Applied Thermodynamics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Applied%20Thermodynamics.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Applied%20Thermodynamics.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-06T12:57:14+11:00","datePublished":"2023-03-06T12:57:14+11:00","description":"Enthalpy","headline":"Applied Thermodynamics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Applied%20Thermodynamics.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Applied%20Thermodynamics.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/notes/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/notes/feed.xml" title="Notes" /></head>
 <body><header class="site-header" role="banner">
@@ -40,16 +40,392 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <h1 class="post-title p-name" itemprop="name headline">Applied Thermodynamics</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2023-03-06T01:14:54+11:00" itemprop="datePublished">Mar 6, 2023
+      <time class="dt-published" datetime="2023-03-06T12:57:14+11:00" itemprop="datePublished">Mar 6, 2023
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#enthalpy">Enthalpy</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#what-is-enthalpy">What is Enthalpy?</a></li>
+<li class="toc-entry toc-h2"><a href="#properties">Properties</a></li>
 </ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#thermodynamic-equations">Thermodynamic Equations</a></li>
+<li class="toc-entry toc-h1"><a href="#heat">Heat</a></li>
+<li class="toc-entry toc-h1"><a href="#laws-of-thermodynamics">Laws of Thermodynamics</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#first-law">First Law</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#first-law-of-thermodynamics-rewritten">First Law of Thermodynamics (rewritten)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#second-law">Second Law</a></li>
+<li class="toc-entry toc-h2"><a href="#third-law">Third Law</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#work">Work</a></li>
+<li class="toc-entry toc-h1"><a href="#specific-and-non-specific-quantities">Specific and non-specific quantities</a></li>
+<li class="toc-entry toc-h1"><a href="#thermodynamic-processes">Thermodynamic Processes</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#isovolumetric-processes">Isovolumetric Processes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#overview">Overview</a></li>
+<li class="toc-entry toc-h3"><a href="#description">Description</a></li>
+<li class="toc-entry toc-h3"><a href="#properties-of-isovolumetric-processes">Properties of Isovolumetric Processes</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#isobaric-processes">Isobaric Processes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#overview-1">Overview</a></li>
+<li class="toc-entry toc-h3"><a href="#description-1">Description</a></li>
+<li class="toc-entry toc-h3"><a href="#properties-of-isobaric-processes">Properties of Isobaric Processes</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#isothermal-processes">Isothermal Processes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#overview-2">Overview</a></li>
+<li class="toc-entry toc-h3"><a href="#description-2">Description</a></li>
+<li class="toc-entry toc-h3"><a href="#properties-of-isothermal-processes">Properties of Isothermal Processes</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#adiabatic-processes">Adiabatic Processes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#overview-3">Overview</a></li>
+<li class="toc-entry toc-h3"><a href="#description-3">Description</a></li>
+<li class="toc-entry toc-h3"><a href="#properties-of-adiabatic-processes">Properties of Adiabatic Processes</a></li>
+<li class="toc-entry toc-h3"><a href="#isentropic-processes">Isentropic Processes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#thermodynamics-of-perfect-gases">Thermodynamics of Perfect Gases</a></li>
+<li class="toc-entry toc-h1"><a href="#cycles">Cycles</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#otto-cycle">Otto Cycle</a></li>
+<li class="toc-entry toc-h2"><a href="#brayton-cycle">Brayton Cycle</a></li>
+<li class="toc-entry toc-h2"><a href="#carnot-cycle">Carnot Cycle</a></li>
+</ul>
+</li>
+</ul><h1 id="enthalpy">
+<a class="anchor" href="#enthalpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Enthalpy</h1>
+
+<h2 id="what-is-enthalpy">
+<a class="anchor" href="#what-is-enthalpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Enthalpy?</h2>
+<p>Enthalpy is a state function meaning In the thermodynamics of equilibrium, a state function, function of state, or point function for a thermodynamic system is a mathematical function relating several state variables or state quantities (that describes equilibrium states of the system) that depend only on the current equilibrium thermodynamic state of the system (e.g. gas, liquid, solid, crystal, or emulsion), not the path which the system has taken to reach its present state</p>
+
+<h2 id="properties">
+<a class="anchor" href="#properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties</h2>
+<p>Enthalpy is the sum of the system’s internal energy and the product of its pressure and volume.</p>
+
+<ul>
+  <li>$H = E +PV$</li>
+  <li>The energy of the gas is not just the vibration. The movement of the particles kinetically also exerts a pressure.</li>
+  <li>Using the first law: $dh = Tds + vdp$, note specific units</li>
+  <li>So change in specific enthalpy is change in heat plus change in pressure</li>
+</ul>
+
+<h1 id="thermodynamic-equations">
+<a class="anchor" href="#thermodynamic-equations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thermodynamic Equations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equation</th>
+      <th>Explanation</th>
+      <th>Variables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pV = mRT</td>
+      <td>Perfect Gas Law</td>
+      <td>p: Pressure, V: Volume, m: Mass, R: Gas Constant, T: Temperature (K)</td>
+    </tr>
+    <tr>
+      <td>$R = c_{p} - c_{v}$</td>
+      <td>Relation between the gas constant and Cp, Cv</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$H = E +PV$</td>
+      <td>Equation for Enthalpy</td>
+      <td>H: Enthalpy, E: Internal Energy, P: Pressure, V: Volume</td>
+    </tr>
+    <tr>
+      <td>$\gamma = c_{p} / c_{v}$</td>
+      <td>Ratio of Specific heats</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$E = mc_{v}T$</td>
+      <td>Internal energy is proportional to temperature for a perfect gas</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>$dS = dQ/T$</td>
+      <td>Change in Entropy is related to change in heat at the temperature it occurred</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="heat">
+<a class="anchor" href="#heat" aria-hidden="true"><span class="octicon octicon-link"></span></a>Heat</h1>
+
+<ul>
+  <li>Heat is not a substance and it cannot be stored</li>
+  <li>Heat is involved in an interaction called “heat transfer”</li>
+  <li>“You do heat on something” like “You do work on something”</li>
+  <li>Heat transfer to a system is positive</li>
+  <li>Heat transfer away from a system is negative</li>
+  <li>A process that has no heat transfer is called “adiabatic”</li>
+</ul>
+
+<h1 id="laws-of-thermodynamics">
+<a class="anchor" href="#laws-of-thermodynamics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Laws of Thermodynamics</h1>
+
+<h2 id="first-law">
+<a class="anchor" href="#first-law" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Law</h2>
+
+<ul>
+  <li>Energy can not be created or destroyed.</li>
+  <li>The change of internal energy of a system is equal to the heat transfer from the surrounding to the system minus the work done by the system on the surroundings</li>
+  <li>$\Delta E_{0} = Q -W$</li>
+</ul>
+
+<h3 id="first-law-of-thermodynamics-rewritten">
+<a class="anchor" href="#first-law-of-thermodynamics-rewritten" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Law of Thermodynamics (rewritten)</h3>
+
+<ul>
+  <li>$dE = TdS - pdV$, change in energy = change in entropy - change in work</li>
+</ul>
+
+<h2 id="second-law">
+<a class="anchor" href="#second-law" aria-hidden="true"><span class="octicon octicon-link"></span></a>Second Law</h2>
+
+<ul>
+  <li>The entropy of the universe always increases.</li>
+  <li>In an ideal reversible process, the incremental change in entropy is the incremental heat transfer divided by the temperature at which that transfer occurs</li>
+  <li>$dS = dQ/T$, Change in entropy is change in Heat divided by the temperature the change occurs at</li>
+  <li>When the entropy dose not change, the process is called “isentropic”</li>
+  <li>In reality all processes have irreversibility. For example, friction occurring in a piston is an irreversible process. The overall entropy of the universe always increases. $dS &gt; dQ/T$</li>
+</ul>
+
+<h2 id="third-law">
+<a class="anchor" href="#third-law" aria-hidden="true"><span class="octicon octicon-link"></span></a>Third Law</h2>
+
+<ul>
+  <li>The lowest possible temperature is -273 Celsius or absolute zero. At this temperature there is no molecular movement and so a perfect crystal would have no disorder.</li>
+</ul>
+
+<h1 id="work">
+<a class="anchor" href="#work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work</h1>
+
+<ul>
+  <li>Work is a process or interaction, it cannot be stored.</li>
+  <li>Word done on a system by its surroundings is positive work</li>
+  <li>Work done by a system on the surroundings is negative work</li>
+  <li>Change in work is - pressure * Volume ( $dW = pdV$)</li>
+</ul>
+
+<h1 id="specific-and-non-specific-quantities">
+<a class="anchor" href="#specific-and-non-specific-quantities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Specific and non-specific quantities</h1>
+
+<ul>
+  <li>Many gas properties are dependant on the mass of gas involved. E, S, Q, H, V</li>
+  <li>Hence mass-specific properties (per-unit mass) often use e, s, q, h, v. For example “specific energy”, e, j/kg</li>
+  <li>So they are generally lowercase when specific.</li>
+  <li>Note the specific volume of a gas, v, is the inverse of its density. $v = 1/\rho$</li>
+  <li>However some parameters such as pressure, P, and Temperature, T, are independent of the mass of the gas.</li>
+</ul>
+
+<h1 id="thermodynamic-processes">
+<a class="anchor" href="#thermodynamic-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thermodynamic Processes</h1>
+
+<p>There are 4 main thermodynamic Processes:</p>
+<ul>
+  <li>Isothermal</li>
+  <li>Adiabatic</li>
+  <li>Isobaric</li>
+  <li>Isovolumetric</li>
+</ul>
+
+<h2 id="isovolumetric-processes">
+<a class="anchor" href="#isovolumetric-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Isovolumetric Processes</h2>
+
+<h3 id="overview">
+<a class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+<p>Describes a system in which the volume is held constant throughout the process. This means no work can be done by the process as displacement is required as a condition to extract work.</p>
+
+<h3 id="description">
+<a class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+<ul>
+  <li>No change in volume indicates no work can be done</li>
+</ul>
+
+<h3 id="properties-of-isovolumetric-processes">
+<a class="anchor" href="#properties-of-isovolumetric-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties of Isovolumetric Processes</h3>
+<ul>
+  <li>$\Delta E = Q$</li>
+  <li>W = 0</li>
+  <li>$\Delta E = Q = mC_v\Delta T$
+Change in Entropy: $s_1 - s_2 = \Delta s= c_{v}log(T_{1}/T)$</li>
+</ul>
+
+<h2 id="isobaric-processes">
+<a class="anchor" href="#isobaric-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Isobaric Processes</h2>
+
+<h3 id="overview-1">
+<a class="anchor" href="#overview-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+<p>Describes a process in which the pressure is kept constant through out. This is generally done by allowing the volume to vary throughout the process.</p>
+
+<h3 id="description-1">
+<a class="anchor" href="#description-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+<ul>
+  <li>No change in pressure
+    <h3 id="properties-of-isobaric-processes">
+<a class="anchor" href="#properties-of-isobaric-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties of Isobaric Processes</h3>
+  </li>
+  <li>$W = P\Delta V$</li>
+  <li>$\Delta E = Q -W$</li>
+  <li>$\Delta E = mC_v\Delta T$</li>
+  <li>$Q = mC_p\Delta T$</li>
+</ul>
+
+<h2 id="isothermal-processes">
+<a class="anchor" href="#isothermal-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Isothermal Processes</h2>
+
+<h3 id="overview-2">
+<a class="anchor" href="#overview-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+<p>Describes a system in which there is no change in temperature and so there is also no change in Internal Energy meaning P and V must change to maintain the constant temperature condition.</p>
+
+<h3 id="description-2">
+<a class="anchor" href="#description-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+<ul>
+  <li>No change in temperature. No change in Internal Energy so P and V change to maintain a constant temperature</li>
+</ul>
+
+<h3 id="properties-of-isothermal-processes">
+<a class="anchor" href="#properties-of-isothermal-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties of Isothermal Processes</h3>
+<ul>
+  <li>PV = Constant, $P_1V_1 = P_2V_2$</li>
+  <li>$\Delta E = 0$, No change in Internal Energy</li>
+  <li>Q = W</li>
+  <li>$W = mRT ln({V_2\over V_1})$</li>
+  <li>$W = P_1V_1 ln({V_2\over V_1})$</li>
+  <li>$W = P_2V_2 ln({V_2\over V_1})$</li>
+</ul>
+
+<h2 id="adiabatic-processes">
+<a class="anchor" href="#adiabatic-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adiabatic Processes</h2>
+
+<h3 id="overview-3">
+<a class="anchor" href="#overview-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+<p>An adiabatic process describes a thermodynamic process that doesn’t transfer heat to or from its surroundings. This does not mean no work can be done. Energy can still flow just not in the form of heat.</p>
+
+<h3 id="description-3">
+<a class="anchor" href="#description-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h3>
+<ul>
+  <li>No Heat transfer to or from the surroundings, nothing is held constant</li>
+</ul>
+
+<h3 id="properties-of-adiabatic-processes">
+<a class="anchor" href="#properties-of-adiabatic-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties of Adiabatic Processes</h3>
+<ul>
+  <li>$pV^\gamma = const$, Therefore ${P_2 \over P_1} = ({V_1 \over V_2})^\gamma$</li>
+  <li>Q = 0, No Heat transfer</li>
+  <li>$W = -\Delta E$, Work is equal to the change in Internal Energy</li>
+  <li>$\Delta E = -W$</li>
+  <li>$W = -mC_v(T_2 - T_1)$</li>
+  <li>$W = { C_v \over R} (P_2V_2-P_1V_1)$</li>
+</ul>
+
+<h3 id="isentropic-processes">
+<a class="anchor" href="#isentropic-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Isentropic Processes</h3>
+<ul>
+  <li>Are a type of Adiabatic process but are also reversible</li>
+</ul>
+
+<h1 id="thermodynamics-of-perfect-gases">
+<a class="anchor" href="#thermodynamics-of-perfect-gases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thermodynamics of Perfect Gases</h1>
+
+<ul>
+  <li>pV = mRT, perfect gas law</li>
+  <li>Specific Terms: $pv = RT$</li>
+  <li>The gas constant is related to two constants: $R = c_{p} - c_{v}$</li>
+  <li>The ratio of specific heats is: $\gamma = c_{p} / c_{v}$</li>
+  <li>Internal energy is proportional to temp: $E = mc_{v}T$</li>
+  <li>Enthalpy is proportional to: $H = mc_{p}T$, so in specific terms: $h=c_{p}T$</li>
+  <li>For an isentropic process: $c_{p} {dT\over T} = R {dp\over p}$</li>
+  <li>For isothermal process: $ds = R {dp\over p}$</li>
+</ul>
+
+<h1 id="cycles">
+<a class="anchor" href="#cycles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycles</h1>
+
+<ul>
+  <li>In thermodynamics Cycles are processes that eventually return back to their initial conditions and so can repeat indefinitely.</li>
+</ul>
+
+<h2 id="otto-cycle">
+<a class="anchor" href="#otto-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Otto Cycle</h2>
+
+<ul>
+  <li>Car engine</li>
+  <li>Comprised of 4 Processes:
+    <ul>
+      <li>Isentropic Compression (1-2)</li>
+      <li>Heat transfer at constant volume (2-3) (Heating of the gas)</li>
+      <li>Isentropic expansion to original volume (3-4)</li>
+      <li>Heat transfer at constant volume (4-1) (Cooling the gas)</li>
+    </ul>
+  </li>
+  <li>Efficiency can be computed: $\eta = 1 - {T4 - T1 \over T3 - T2}$</li>
+</ul>
+
+<p><img src="https://supernotes-resources.s3.amazonaws.com/direct-uploads/1839048f-ecfe-4a53-8621-5bac5345436d--maxresdefault.jpg" alt="maxresdefault.jpg"></p>
+
+<h2 id="brayton-cycle">
+<a class="anchor" href="#brayton-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Brayton Cycle</h2>
+
+<ul>
+  <li>The gas turbine cycle</li>
+  <li>Can be made unlike the Carnot cycle</li>
+  <li>Comprised of 4 Processes:
+    <ul>
+      <li>Isentropic Compression (1-2)</li>
+      <li>Isobaric Heat addition Process (Combustion) (2-3)</li>
+      <li>Isentropic Expansion (Pressure decrease, volume increase) (3-4)</li>
+      <li>Isentropic Expansion (4-1)</li>
+    </ul>
+  </li>
+  <li>Shown on diagram as a closed loop system, this is not true to real life.</li>
+  <li>Efficiency can be computed: $\eta = 1 - {T4 - T1 \over T3 - T2}$</li>
+</ul>
+
+<h2 id="carnot-cycle">
+<a class="anchor" href="#carnot-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Carnot Cycle</h2>
+
+<ul>
+  <li>$W = (T_{2,3} - T_{1,4})\Delta S$</li>
+  <li>Heat transfer from surroundings to system is: $\Delta q = T_{2,3}\Delta S$</li>
+  <li>Heat transfer from surroundings to system is: $\Delta q = T_{1,4}\Delta S$</li>
+  <li>Efficiency: $\eta_{cycle} = 1 - {T_{1,4}\over T_{2,3}}$</li>
+</ul>
+
 
   </div><a class="u-url" href="/notes/AerospaceEngineering/Applied%20Thermodynamics.html" hidden></a>
 </article>

@@ -7,17 +7,17 @@
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Aerospace Structures" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations." />
-<meta property="og:description" content="This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations." />
+<meta name="description" content="Intro to Structural Analysis" />
+<meta property="og:description" content="Intro to Structural Analysis" />
 <link rel="canonical" href="http://localhost:4000/notes/AerospaceEngineering/Aerospace%20Structures.html" />
 <meta property="og:url" content="http://localhost:4000/notes/AerospaceEngineering/Aerospace%20Structures.html" />
 <meta property="og:site_name" content="Notes" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-06T01:14:54+11:00" />
+<meta property="article:published_time" content="2023-03-06T12:57:14+11:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Aerospace Structures" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-06T01:14:54+11:00","datePublished":"2023-03-06T01:14:54+11:00","description":"This is a Jekyll generated site used to host markdown notes. It leverages Mathjax to display the equations.","headline":"Aerospace Structures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Aerospace%20Structures.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Aerospace%20Structures.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-06T12:57:14+11:00","datePublished":"2023-03-06T12:57:14+11:00","description":"Intro to Structural Analysis","headline":"Aerospace Structures","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Aerospace%20Structures.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Aerospace%20Structures.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/notes/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/notes/feed.xml" title="Notes" /></head>
 <body><header class="site-header" role="banner">
@@ -40,16 +40,669 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <h1 class="post-title p-name" itemprop="name headline">Aerospace Structures</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2023-03-06T01:14:54+11:00" itemprop="datePublished">Mar 6, 2023
+      <time class="dt-published" datetime="2023-03-06T12:57:14+11:00" itemprop="datePublished">Mar 6, 2023
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#intro-to-structural-analysis">Intro to Structural Analysis</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#stress">Stress</a></li>
+<li class="toc-entry toc-h2"><a href="#shear-and-normal-stress-produce-fundamentally-different-forces-in-the-material">Shear and Normal stress produce fundamentally different forces in the material</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-strain-what-are-the-units-of-strain">What is strain? What are the units of strain?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-normal-strain-what-is-shear-strain">What is normal strain? What is shear strain?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-a-positive-and-negative-normal-strain">What is a positive and negative normal strain?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-a-positive-and-negative-shear-strain">What is a positive and negative shear strain?</a></li>
+<li class="toc-entry toc-h2"><a href="#normal-strain-is">Normal Strain is?</a></li>
+<li class="toc-entry toc-h2"><a href="#shear-strain-is">Shear Strain is?</a></li>
+<li class="toc-entry toc-h2"><a href="#poissons-ratio">Poisson’s ratio?</a></li>
+<li class="toc-entry toc-h2"><a href="#hookes-law">Hooke’s Law?</a></li>
+<li class="toc-entry toc-h2"><a href="#plane-2d-problems">Plane (2D) Problems</a></li>
+<li class="toc-entry toc-h2"><a href="#beams-and-plates">Beams and Plates</a></li>
+<li class="toc-entry toc-h2"><a href="#2d-state-of-stress">2D State of Stress</a></li>
+<li class="toc-entry toc-h2"><a href="#aircraft-materials">Aircraft Materials</a></li>
+<li class="toc-entry toc-h2"><a href="#static-equivalence">Static Equivalence</a></li>
+<li class="toc-entry toc-h2"><a href="#partial-derivative">Partial Derivative</a></li>
+<li class="toc-entry toc-h2"><a href="#support-conditions">Support Conditions</a></li>
+<li class="toc-entry toc-h2"><a href="#internal-loads">Internal Loads</a></li>
+<li class="toc-entry toc-h2"><a href="#force-and-moment-diagrams">Force and Moment Diagrams</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#reference-material">Reference Material</a></li>
 </ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#euler-buckling">Euler Buckling</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#euler-column-theory">Euler Column Theory</a></li>
+<li class="toc-entry toc-h2"><a href="#derivation-of-euler-buckling-equation">Derivation of Euler Buckling Equation</a></li>
+<li class="toc-entry toc-h2"><a href="#buckling-modes">Buckling Modes</a></li>
+<li class="toc-entry toc-h2"><a href="#effective-length">Effective Length</a></li>
+<li class="toc-entry toc-h2"><a href="#end-fixity">End Fixity</a></li>
+<li class="toc-entry toc-h2"><a href="#second-moment-of-area">Second Moment of Area</a></li>
+<li class="toc-entry toc-h2"><a href="#stress-form-of-buckling-equation">Stress Form of Buckling Equation</a></li>
+<li class="toc-entry toc-h2"><a href="#column-curve">Column Curve</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#inelastic-buckling">Inelastic Buckling</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#column-curve-ranges">Column Curve Ranges</a></li>
+<li class="toc-entry toc-h2"><a href="#empirical-short-column-equations">Empirical Short Column Equations</a></li>
+<li class="toc-entry toc-h2"><a href="#euler-johnson-equation">Euler-Johnson Equation</a></li>
+<li class="toc-entry toc-h2"><a href="#inelastic-plate-buckling">Inelastic Plate Buckling</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#plate-and-local-buckling">Plate and Local Buckling</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#flexural-buckling">Flexural Buckling</a></li>
+<li class="toc-entry toc-h2"><a href="#rectangular-plates-in-shear">Rectangular Plates in Shear</a></li>
+<li class="toc-entry toc-h2"><a href="#rectangular-plates-in-compression">Rectangular Plates in Compression</a></li>
+<li class="toc-entry toc-h2"><a href="#plate-buckling-stress">Plate Buckling Stress</a></li>
+<li class="toc-entry toc-h2"><a href="#local-buckling">Local Buckling</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#bending">Bending</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#bending-stresses">Bending Stresses</a></li>
+<li class="toc-entry toc-h2"><a href="#symmetric-bending">Symmetric Bending</a></li>
+<li class="toc-entry toc-h2"><a href="#asymmetric-bending-equation">Asymmetric Bending Equation</a></li>
+<li class="toc-entry toc-h2"><a href="#bending-sign-convention">Bending Sign Convention</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#thin-wall-assumptions">Thin Wall Assumptions</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#equations">Equations</a></li>
+<li class="toc-entry toc-h3"><a href="#properties-of-plane-sections">Properties of Plane sections</a></li>
+<li class="toc-entry toc-h3"><a href="#stiffened-structures">Stiffened Structures</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#shear">Shear</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#shear-flow">Shear flow</a></li>
+</ul>
+</li>
+</ul><h1 id="intro-to-structural-analysis">
+<a class="anchor" href="#intro-to-structural-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intro to Structural Analysis</h1>
+
+<p>Content Tags: Hookes Law, Internal Loads, Strain, Stress, Supports
+Created: March 6, 2022 9:10 AM</p>
+
+<h2 id="stress">
+<a class="anchor" href="#stress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stress</h2>
+
+<ul>
+  <li>Stress on a small element of a material under load</li>
+  <li>2 types of stresses:
+    <ul>
+      <li>Normal</li>
+      <li>Shear</li>
+    </ul>
+  </li>
+  <li>Ask what does a load do to a cross section?
+    <ul>
+      <li>What loads are there? Moments? Stresses?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="shear-and-normal-stress-produce-fundamentally-different-forces-in-the-material">
+<a class="anchor" href="#shear-and-normal-stress-produce-fundamentally-different-forces-in-the-material" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shear and Normal stress produce fundamentally different forces in the material</h2>
+
+<ul>
+  <li>Normal is a compressive or stretching action</li>
+  <li>Shear is considered as though it acts on a plane</li>
+</ul>
+
+<h2 id="what-is-strain-what-are-the-units-of-strain">
+<a class="anchor" href="#what-is-strain-what-are-the-units-of-strain" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is strain? What are the units of strain?</h2>
+
+<ul>
+  <li>Strain is a change in material distortion under the effect of a stress</li>
+  <li>The units are dimensionless (Change in Length/Length)</li>
+</ul>
+
+<h2 id="what-is-normal-strain-what-is-shear-strain">
+<a class="anchor" href="#what-is-normal-strain-what-is-shear-strain" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is normal strain? What is shear strain?</h2>
+
+<ul>
+  <li>Normal strain acts through the cross section of the body to lengthen or contract it</li>
+  <li>Shear strain creates torsion and warping</li>
+</ul>
+
+<h2 id="what-is-a-positive-and-negative-normal-strain">
+<a class="anchor" href="#what-is-a-positive-and-negative-normal-strain" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a positive and negative normal strain?</h2>
+
+<ul>
+  <li>Positive normal acts in torsion</li>
+  <li>Negative acts to compress</li>
+</ul>
+
+<h2 id="what-is-a-positive-and-negative-shear-strain">
+<a class="anchor" href="#what-is-a-positive-and-negative-shear-strain" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a positive and negative shear strain?</h2>
+
+<ul>
+  <li>Positive and negative only alters the direction of the torsion. So clockwise or counter-clockwise</li>
+</ul>
+
+<h2 id="normal-strain-is">
+<a class="anchor" href="#normal-strain-is" aria-hidden="true"><span class="octicon octicon-link"></span></a>Normal Strain is?</h2>
+
+<ul>
+  <li>The slope of displacement</li>
+</ul>
+
+<h2 id="shear-strain-is">
+<a class="anchor" href="#shear-strain-is" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shear Strain is?</h2>
+
+<ul>
+  <li>Still non-dimensional</li>
+  <li>Relationship??</li>
+</ul>
+
+<h2 id="poissons-ratio">
+<a class="anchor" href="#poissons-ratio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Poisson’s ratio?</h2>
+
+<ul>
+  <li>Ratio of strains. Reaction strain acting in orthogonal direction is cause by original strain.</li>
+</ul>
+
+<h2 id="hookes-law">
+<a class="anchor" href="#hookes-law" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hooke’s Law?</h2>
+
+<ul>
+  <li>Constant Value = Stress/Strain, while elastic.</li>
+</ul>
+
+<h2 id="plane-2d-problems">
+<a class="anchor" href="#plane-2d-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plane (2D) Problems</h2>
+
+<ul>
+  <li>Disregard a particular aspect because nothing important is happening in the other access out of plane. This needs to be carefully evaluated.</li>
+</ul>
+
+<h2 id="beams-and-plates">
+<a class="anchor" href="#beams-and-plates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Beams and Plates</h2>
+
+<ul>
+  <li>Take a beam and extrude it for plates</li>
+  <li>Plates have a poisson effect that beams don’t have</li>
+</ul>
+
+<h2 id="2d-state-of-stress">
+<a class="anchor" href="#2d-state-of-stress" aria-hidden="true"><span class="octicon octicon-link"></span></a>2D State of Stress</h2>
+
+<ul>
+  <li>Your stresses are dependant on your coordinate system</li>
+  <li>Can resolve state of stress into principal stress</li>
+  <li>Use Moores circle</li>
+  <li>A cylinder under normal tension will fracture vertically</li>
+  <li>A cylinder under shear will fracture diagonally. Imagine the shear diagram deforming a square into a kite shape.</li>
+</ul>
+
+<h2 id="aircraft-materials">
+<a class="anchor" href="#aircraft-materials" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aircraft Materials</h2>
+
+<ul>
+  <li>Common Materials:
+    <ul>
+      <li>Metals (Most discussed)</li>
+      <li>composites</li>
+      <li>Sandwich</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="static-equivalence">
+<a class="anchor" href="#static-equivalence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static Equivalence</h2>
+
+<ul>
+  <li>Same forces and same moments</li>
+  <li>Internal loads must be equivalent to the external load that is acting on the body.</li>
+  <li>Internal reaction loads are equal and opposite. The internal loads are not.</li>
+</ul>
+
+<h2 id="partial-derivative">
+<a class="anchor" href="#partial-derivative" aria-hidden="true"><span class="octicon octicon-link"></span></a>Partial Derivative</h2>
+
+<ul>
+  <li>The partial derivative is the derivative of a function with respect to one variable only</li>
+  <li>This gives the rate of change, or slope, of a function with respect to one variable</li>
+</ul>
+
+<h2 id="support-conditions">
+<a class="anchor" href="#support-conditions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support Conditions</h2>
+
+<ul>
+  <li>Import drawings for supports. (Roller, Fixed, Pin). Add degree of freedom info.</li>
+  <li>Rollers always provide a force in the Y direction regardless of the sign of the force. Not in the X direction. Or vice versa depending on the unit system.</li>
+</ul>
+
+<h2 id="internal-loads">
+<a class="anchor" href="#internal-loads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Internal Loads</h2>
+
+<ul>
+  <li>4 Types of internal loads:
+    <ul>
+      <li>Normal (N)</li>
+      <li>Shear (V)</li>
+      <li>Torsional (T)</li>
+      <li>Bending (M)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="force-and-moment-diagrams">
+<a class="anchor" href="#force-and-moment-diagrams" aria-hidden="true"><span class="octicon octicon-link"></span></a>Force and Moment Diagrams</h2>
+
+<ul>
+  <li>Take a slice and determine the shear force and moment at that point (This is important for this course)</li>
+</ul>
+
+<h3 id="reference-material">
+<a class="anchor" href="#reference-material" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference Material</h3>
+
+<p><a href="AerospaceStructuresMedia/(1A)_Intro_to_structural_analysis-1.pdf">(1A)_Intro_to_structural_analysis-1.pdf</a></p>
+
+<hr>
+
+<h1 id="euler-buckling">
+<a class="anchor" href="#euler-buckling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Euler Buckling</h1>
+
+<p>Created: April 28, 2022 11:02 AM</p>
+
+<h2 id="euler-column-theory">
+<a class="anchor" href="#euler-column-theory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Euler Column Theory</h2>
+
+<ul>
+  <li>Valid, within the limits of assumptions</li>
+  <li>Based on a perfect stable section column
+    <ul>
+      <li>The column is perfectly straight</li>
+      <li>Load is applied at the section centroid</li>
+      <li>Column material is homogenous</li>
+      <li>Stresses are in the elastic range</li>
+      <li>No local section instabilities (no twist or deformation)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="AerospaceStructuresMedia/Untitled.png" alt="Untitled"></p>
+
+<ul>
+  <li>Perfect column under compressive load P</li>
+  <li>Load associated with buckling is $P_{CR}$</li>
+  <li>If column is displaced by lateral load F</li>
+</ul>
+
+<h2 id="derivation-of-euler-buckling-equation">
+<a class="anchor" href="#derivation-of-euler-buckling-equation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Derivation of Euler Buckling Equation</h2>
+
+<p><img src="AerospaceStructuresMedia/Untitled%201.png" alt="Untitled"></p>
+
+<p><img src="AerospaceStructuresMedia/Untitled%202.png" alt="Untitled"></p>
+
+<h2 id="buckling-modes">
+<a class="anchor" href="#buckling-modes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buckling Modes</h2>
+
+<ul>
+  <li>Each n buckling mode (displacement shape) has an associated buckling load</li>
+  <li>n = number of “half waves” in buckling mode shape</li>
+</ul>
+
+\[P_{CR} = {n^2\pi^2EI\over L^2}\]
+
+<h2 id="effective-length">
+<a class="anchor" href="#effective-length" aria-hidden="true"><span class="octicon octicon-link"></span></a>Effective Length</h2>
+
+<p><img src="AerospaceStructuresMedia/Untitled%203.png" alt="Untitled"></p>
+
+<h2 id="end-fixity">
+<a class="anchor" href="#end-fixity" aria-hidden="true"><span class="octicon octicon-link"></span></a>End Fixity</h2>
+
+<ul>
+  <li>How the ends of the columns are restrained</li>
+  <li>Most columns have some form of restraint (end fixity)</li>
+  <li>To account for this, the effective length L’ is adopted $P_{CR} = {\pi^2EI\over (L’)^2}$</li>
+</ul>
+
+<p><img src="AerospaceStructuresMedia/Untitled%204.png" alt="Untitled"></p>
+
+<h2 id="second-moment-of-area">
+<a class="anchor" href="#second-moment-of-area" aria-hidden="true"><span class="octicon octicon-link"></span></a>Second Moment of Area</h2>
+
+<p><img src="AerospaceStructuresMedia/Untitled%205.png" alt="Untitled"></p>
+
+<ul>
+  <li>Buckling always occurs around the axis of $I_{min}$</li>
+</ul>
+
+<h2 id="stress-form-of-buckling-equation">
+<a class="anchor" href="#stress-form-of-buckling-equation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stress Form of Buckling Equation</h2>
+
+<p><img src="AerospaceStructuresMedia/Untitled%206.png" alt="Untitled"></p>
+
+<h2 id="column-curve">
+<a class="anchor" href="#column-curve" aria-hidden="true"><span class="octicon octicon-link"></span></a>Column Curve</h2>
+
+<p><img src="AerospaceStructuresMedia/Untitled%207.png" alt="Untitled"></p>
+
+<h1 id="inelastic-buckling">
+<a class="anchor" href="#inelastic-buckling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inelastic Buckling</h1>
+
+<h2 id="column-curve-ranges">
+<a class="anchor" href="#column-curve-ranges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Column Curve Ranges</h2>
+
+<ul>
+  <li>Metal material behaviour is non-linear following yield or elastic limit</li>
+  <li>“Long” columns buckle when material is still in elastic region</li>
+  <li>“Short” columns undergo plasticity <strong>before</strong> buckling</li>
+  <li>Euler theory will over-estimate the buckling stress in the case of a “short” column</li>
+  <li>Very short columns (L’/$\rho$ ~ 10) fail by crushing, or “block compression”</li>
+</ul>
+
+<h2 id="empirical-short-column-equations">
+<a class="anchor" href="#empirical-short-column-equations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Empirical Short Column Equations</h2>
+
+<ul>
+  <li>Empirical (test-based) relationships developed for buckling of thin-walled sections (which incorporates local buckling)</li>
+  <li>Column curve is a structural response (not material)</li>
+  <li>Empirical relationships developed for common sections and materials</li>
+  <li>Linear and parabolic forms most common, other indices are possible.</li>
+  <li>Linear:</li>
+</ul>
+
+\[\sigma_{CR} = \sigma_{c0} - k(L'/\rho)\]
+
+<ul>
+  <li>Parabolic:</li>
+</ul>
+
+\[\sigma_{CR} = \sigma_{c0} - k(L'/\rho)^2\]
+
+<ul>
+  <li>Stress $\sigma_{c0}$ is a property of the cross-section (assumed independent of length), and material</li>
+  <li>Can be found using several approaches
+    <ul>
+      <li>Assumed equal to ultimate compressive strength $\sigma_{cu}$</li>
+      <li>Taken from test data for a very short column</li>
+      <li>Determined analytically or semi-empirically</li>
+      <li>Found using data sheets (e.g. ESDU), standards (e.g. MIL-HDBK), etc</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="euler-johnson-equation">
+<a class="anchor" href="#euler-johnson-equation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Euler-Johnson Equation</h2>
+
+<ul>
+  <li>A type of parabolic short column equation</li>
+</ul>
+
+\[\sigma_{CR} = \sigma_{c0}[1-{\sigma_{c0} \over 4 \pi^2E}\cdot({L' \over \rho})^2]\]
+
+<h2 id="inelastic-plate-buckling">
+<a class="anchor" href="#inelastic-plate-buckling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inelastic Plate Buckling</h2>
+
+<ul>
+  <li>Elastic-plastic behaviour for metals affects buckling
+    <ul>
+      <li>Similar behaviour previously seen for columns</li>
+    </ul>
+  </li>
+  <li>Buckling can occur at stresses above elastic limit</li>
+  <li>Less common as requires thick plates</li>
+  <li>One approach (less common in industry) treats the plate as a column
+    <ul>
+      <li>Relate the plate to an equivalant column using:</li>
+    </ul>
+  </li>
+</ul>
+
+\[({L' \over \rho}) = {\pi \over \sqrt{k}} \cdot ({b \over t})\]
+
+<ul>
+  <li>Then simply use the above inelastic equation depending on the situation (Linear, Parabolic, Euler-Johnson)</li>
+</ul>
+
+<h1 id="plate-and-local-buckling">
+<a class="anchor" href="#plate-and-local-buckling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plate and Local Buckling</h1>
+
+<h2 id="flexural-buckling">
+<a class="anchor" href="#flexural-buckling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flexural Buckling</h2>
+
+<ul>
+  <li>Global Buckling
+    <ul>
+      <li>Primary instability mode of the entire column, or instability due to overall column bending
+        <ul>
+          <li>Characteristic length ~ distance between supports</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="rectangular-plates-in-shear">
+<a class="anchor" href="#rectangular-plates-in-shear" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rectangular Plates in Shear</h2>
+
+<ul>
+  <li>Buckling in shear is determined from the same equation
+    <ul>
+      <li>Analytical derivation of buckling not considered here</li>
+    </ul>
+  </li>
+  <li>A rectangular plate in shear develops a series of closely space buckling waves at approximately 45 degrees</li>
+  <li>The effect of boundary conditions and plate size is similar to that of a plate in compression.
+<img src="https://supernotes-resources.s3.amazonaws.com/image-uploads/ec0b59c5-e658-4b0b-bb6f-7d4af81e56c7--Plates%20in%20Shear.png" alt="Plates in Shear.png">
+</li>
+  <li>We use a different graph to obtain our K values but the process is the same from a calculation standpoint.</li>
+  <li><strong>In shear buckling the b in the equation is always the smaller dimension</strong></li>
+  <li>$\sigma_{cr} = {KE  ({t \over b})^2}$
+<img src="https://supernotes-resources.s3.amazonaws.com/image-uploads/fe508ed6-7ee9-4c97-a894-9300bf3580f2--Shear%20k.png" alt="Shear k.png">
+</li>
+</ul>
+
+<h2 id="rectangular-plates-in-compression">
+<a class="anchor" href="#rectangular-plates-in-compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rectangular Plates in Compression</h2>
+
+<ul>
+  <li>With plates we need to more carefully consider which mode of buckling will be take the least amount of energy.
+    <ul>
+      <li>Across the width of the plate mode 1 is still the lowest so only one half wave will be present</li>
+      <li>This is not true when considering the height.</li>
+      <li>The plates will buckle into a shape that is the closest to maintaining “square” buckles along its length. So each buckle will occur at lengths that approximate square sections of the total plate.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://supernotes-resources.s3.amazonaws.com/image-uploads/b1669fcd-0fb6-4ee3-86de-4cad2b178c47--Buckle%20Shape.png" alt="Buckle Shape.png"></p>
+<ul>
+  <li>As seen above the plate buckles into two “square” sections. This is the lowest energy buckling mode.
+<img src="https://supernotes-resources.s3.amazonaws.com/image-uploads/a7336b39-32d4-44df-8aa3-66fb49f07d4c--k%20Vale.png" alt="k Vale.png">
+</li>
+  <li>$K_{\infty}$ is a good approximate for really skinny plates.
+<img src="https://supernotes-resources.s3.amazonaws.com/image-uploads/80b40aaa-9d7f-4c82-adcb-eccae9b9424f--k%20boundary.png" alt="k boundary.png">
+</li>
+</ul>
+
+<h2 id="plate-buckling-stress">
+<a class="anchor" href="#plate-buckling-stress" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plate Buckling Stress</h2>
+
+<ul>
+  <li>Compression and shear stresses on a plate can lead to buckling</li>
+  <li>Buckling load of a flat plate is dependant on
+    <ul>
+      <li>Type of loading (compression, shear)</li>
+      <li>Material (E, v, t)</li>
+      <li>Edge support (fix, pin, etc)</li>
+      <li>Geometry of the plate (dimensions, aspect ratio)</li>
+    </ul>
+  </li>
+  <li>Buckling stress of plates is always:</li>
+</ul>
+
+\[\sigma_{cr} = {KE  ({t \over b})^2}\]
+
+<p>Where,</p>
+<ul>
+  <li>K is a buckling constant
+    <ul>
+      <li>Varies with restraint, geometry, loading, material</li>
+    </ul>
+  </li>
+  <li>E is elastic Modulus</li>
+  <li>$({t\over b})$ is the ratio of the plate thickness to width.</li>
+  <li><strong>b is always the width of the loaded edge regardless of orientation for compression buckling</strong></li>
+</ul>
+
+<h2 id="local-buckling">
+<a class="anchor" href="#local-buckling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Local Buckling</h2>
+
+<ul>
+  <li>Occurs when the column acts like a collection of square plates. Common in thin-walled structures.</li>
+  <li>Thin-wall panels can buckle before or after flexural buckling</li>
+  <li>Usually confined to localised portions of the total length
+    <ul>
+      <li>Characteristic length ~ cross-section dimensions</li>
+      <li>Thin-wall columns see local buckling of the flanges</li>
+      <li>Stiffened beams see skins buckling between stiffeners</li>
+    </ul>
+  </li>
+  <li>Simple predictions for local buckling can be made by analysing the structure as a series of plates</li>
+  <li>The corners of a cross-section and the stiffeners in a stiffened beam provide restraint</li>
+  <li>Each segment or plate has different geometry and boundary conditions and requires separate calculation</li>
+  <li>The restraint applied on each plate by the corners and stiffeners is difficult to determine</li>
+  <li>In both cases the restraint should vary between a fixed and simple support</li>
+  <li>Simple support can be assumed for conservative estimates unless the condition is known or given</li>
+</ul>
+
+<h1 id="bending">
+<a class="anchor" href="#bending" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bending</h1>
+
+<h2 id="bending-stresses">
+<a class="anchor" href="#bending-stresses" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bending Stresses</h2>
+
+<ul>
+  <li>Bending of a beam causes compression and tension stresses on a cross-section (bending stresses)</li>
+  <li>These are direct stresses, normal to the cross-section</li>
+  <li>Between the compression and tension regions is a line of zero bending stesses, called the neutral axis
+    <ul>
+      <li>The neutral axis passes through the section centroids</li>
+      <li>The neutral axis has no deformation or stains associated with bending stress</li>
+    </ul>
+  </li>
+  <li>Bending of a beam can occur around two axes
+    <ul>
+      <li>The two in-plane axes of a cross-section</li>
+      <li>bend axes, moment, stress distribution, resists all change</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="symmetric-bending">
+<a class="anchor" href="#symmetric-bending" aria-hidden="true"><span class="octicon octicon-link"></span></a>Symmetric Bending</h2>
+
+<ul>
+  <li>Symmetric Bending occurs for bending of beams with one or two axes of symmetry
+    <ul>
+      <li>Axis of symmetry = “mirror plane”</li>
+    </ul>
+  </li>
+  <li>Bending behaviour is simplified as bending around the two axes acts independently</li>
+  <li>Uses equation: $\sigma <em>{bending} = {M</em>{bending} \over I_x} y$</li>
+  <li>For bending in two seperate axis we can calculate the stress for both and simply add them. Direct stress can also be added.</li>
+</ul>
+
+<h2 id="asymmetric-bending-equation">
+<a class="anchor" href="#asymmetric-bending-equation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Asymmetric Bending Equation</h2>
+
+<ul>
+  <li>Bending always relates to a centroid coordinate system</li>
+  <li>General equation for bending stress:</li>
+</ul>
+
+\[\sigma_z =({M_yI_x -M_xI_{xy}\over I_xI_y-I_{xy}^2})x +({M_xI_y -M_yI_{xy}\over I_xI_y-I_{xy}^2})y\]
+
+<p>Works for any bending problem. Including symmetric bending and single moment bending.</p>
+
+<h2 id="bending-sign-convention">
+<a class="anchor" href="#bending-sign-convention" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bending Sign Convention</h2>
+
+<p><img src="https://supernotes-resources.s3.amazonaws.com/image-uploads/fb585ac7-821a-4dbc-95b5-2b6da58f9f9c--Sign%20Convention.png" alt="Sign Convention.png"></p>
+
+<h1 id="thin-wall-assumptions">
+<a class="anchor" href="#thin-wall-assumptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thin Wall Assumptions</h1>
+
+<h3 id="equations">
+<a class="anchor" href="#equations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Equations</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equation</th>
+      <th>Explanation</th>
+      <th>Variables</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$I_{x} = {bd^3\over 12}$</td>
+      <td>Second Moment of Inertia for a rectangle, measured from the x axis.</td>
+      <td>d is the direction perpendicular to the y axis.</td>
+    </tr>
+    <tr>
+      <td>$I_{x} = {b^3d\over 12}$</td>
+      <td>Second Moment of Inertia for a rectangle, measured from the y axis.</td>
+      <td>b is the direction perpendicular to the x axis.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="properties-of-plane-sections">
+<a class="anchor" href="#properties-of-plane-sections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Properties of Plane sections</h3>
+
+<ul>
+  <li>First Moment of Area (important for centroids)</li>
+  <li>Second Moment of Area</li>
+  <li>Rotation of Axes</li>
+  <li>Parallel axis theorem</li>
+</ul>
+
+<h3 id="stiffened-structures">
+<a class="anchor" href="#stiffened-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stiffened Structures</h3>
+
+<ul>
+  <li>Consist of two structural elements, which can be assumed to perform seperate functions.</li>
+</ul>
+
+<h1 id="shear">
+<a class="anchor" href="#shear" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shear</h1>
+
+<h2 id="shear-flow">
+<a class="anchor" href="#shear-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shear flow</h2>
+<ul>
+  <li>Force on Length</li>
+</ul>
+
+\[q = {T \over 2A_E}\]
+
+<p>Where,</p>
+
+<p>T = applied torque,
+Ae = area enclose by cross-section (mid-line)</p>
+
 
   </div><a class="u-url" href="/notes/AerospaceEngineering/Aerospace%20Structures.html" hidden></a>
 </article>

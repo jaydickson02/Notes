@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Reset some basic elements
  */
@@ -699,6 +700,7 @@ tr:nth-child(even) {
 .site-header {
   background-color: var(--header-color);
   border-bottom: 1px solid var(--main-background-color) !important;
+  border-top: 0px;
 }
 .site-header a {
   color: var(--header-text-color) !important;
@@ -709,6 +711,42 @@ table .tblmultirow {
 }
 table .spacer {
   background-color: var(--spacerColour) !important;
+}
+
+.post-content h1 {
+  font-size: 32px;
+}
+.post-content h2 {
+  font-size: 24px;
+  font-style: italic;
+}
+.post-content h3 {
+  font-size: 18px;
+}
+.post-content h4 {
+  font-size: 12px;
+}
+.post-content h5 {
+  font-size: 8px;
+}
+.post-content ul {
+  list-style: none; /* Remove default bullets */
+}
+.post-content ul li::before {
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: rgb(64, 90, 168); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.site-nav {
+  display: none;
+}
+
+.SubjectTable a {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=main.css.map */
