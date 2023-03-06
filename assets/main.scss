@@ -13,6 +13,7 @@ html {
     --header-text-color: rgb(51, 51, 51);
     --spacerColour: rgb(255, 255, 255);
     --table-header-color: rgb(196, 193, 193);
+    --toc-background-color: rgb(240, 240, 240);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +26,7 @@ html {
         --header-text-color: rgb(204, 217, 229);
         --spacerColour: rgb(74, 87, 102);
         --table-header-color: rgb(35, 41, 52);
+        --toc-background-color: rgb(45, 51, 59);
 	}
 }
 
@@ -117,7 +119,7 @@ table {
 }
 
 .site-nav {
-    display: none;
+    /*display: none;*/
 }
 
 .SubjectTable {
@@ -125,3 +127,57 @@ table {
         font-size: 14px;
     }
 }
+
+
+
+.table-of-contents {
+    background: var(--toc-background-color) none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: 100%;
+
+    ul {
+        list-style: none; /* Remove default bullets */
+      }
+      
+      ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: rgb(64, 90, 168); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+
+    a {
+        color: var(--light-text-color) !important;
+    }
+}
+
+.toc-title {
+    font-weight: 700;
+    text-align: center;
+}
+
+.projectlist {
+
+    list-style : none;  /* Remove default bullets */
+    margin-left: 0;
+
+    a {
+        color: var(--main-text-color) !important;
+    }
+
+    div {
+        display:inline-block !important;
+        border: 1px solid var(--light-text-color);
+        width: 100%;
+        padding: 2%;
+        margin-bottom: 4px;
+    }
+}
+
+

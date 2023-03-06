@@ -42,6 +42,10 @@ collections_dir: collections
 collections:
   AerospaceEngineering:
     output: true
+  Assignments:
+    output: true
+  TextBooks:
+    output: true
 
 defaults:
   - scope:
@@ -50,6 +54,29 @@ defaults:
     values:
       layout: "post"
       toc: true
+  - scope:
+      path: ""
+      type: "Assignments"
+    values:
+      layout: "post"
+      toc: true
+  - scope:
+      path: ""
+      type: "TextBooks"
+    values:
+      layout: "post"
+      toc: true
+
+toc:
+  min_level: 1
+  max_level: 6
+  ordered_list: false
+  no_toc_section_class: no_toc_section
+  list_id: toc
+  list_class: section-nav
+  sublist_class: ''
+  item_class: toc-entry
+  item_prefix: toc-
 
 
 # Exclude from processing.
