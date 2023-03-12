@@ -7,7 +7,7 @@ title:  "Projects"
 <h1>Projects</h1>
 <ul class="projectlist">
 
-<div><li><a href="/notes/assignments/Assignment 3 Research Proposal & Literature Review.pdf">
+<div><li><a href="{{ site.url }}{{ site.baseurl }}/_Assignments/Assignment 3 Research Proposal & Literature Review.pdf">
 Research Proposal & Literature Review | Semester 2 2022
 </a></li></div>
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Engineering Capstone Project Part A"
 ---
 
-# Building a System for Managing Satellite Trajectories (Initial Thoughts)
+# Building a System for Managing Satellite Trajectories
 
 To build a system for managing satellite trajectories, you need to consider several important components.
 
