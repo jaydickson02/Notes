@@ -13,11 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html" />
 <meta property="og:site_name" content="Jay Dickson Notes" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-03-09T16:39:08+11:00" />
+<meta property="article:published_time" content="2023-03-12T18:30:56+11:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Computational and High-Speed Aerodynamics" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-09T16:39:08+11:00","datePublished":"2023-03-09T16:39:08+11:00","description":"Lecture 1 - Review of Aerodynamic Concepts","headline":"Computational and High-Speed Aerodynamics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-12T18:30:56+11:00","datePublished":"2023-03-12T18:30:56+11:00","description":"Lecture 1 - Review of Aerodynamic Concepts","headline":"Computational and High-Speed Aerodynamics","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"},"url":"http://localhost:4000/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/notes/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/notes/feed.xml" title="Jay Dickson | Notes" /></head>
 <body><header class="site-header" role="banner">
@@ -51,7 +51,7 @@
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <h1 class="post-title p-name" itemprop="name headline">Computational and High-Speed Aerodynamics</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2023-03-09T16:39:08+11:00" itemprop="datePublished">Mar 9, 2023
+      <time class="dt-published" datetime="2023-03-12T18:30:56+11:00" itemprop="datePublished">Mar 12, 2023
       </time></p>
   </header>
   <div class="table-of-contents">
@@ -64,7 +64,18 @@
 <li class="toc-entry toc-h2"><a href="#physical-quantities">Physical Quantities</a></li>
 <li class="toc-entry toc-h2"><a href="#properties-of-a-fluid">Properties of a Fluid</a></li>
 <li class="toc-entry toc-h2"><a href="#dimensional-analysis">Dimensional Analysis</a></li>
-<li class="toc-entry toc-h2"><a href="#table-test">Table Test</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#the-boundary-layer-concept-prandtl">The boundary layer concept (prandtl)</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#origin-of-boundary-layer">Origin of boundary layer</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#no-slip-condition">No-slip condition</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#definition-of-boundary-layer-profile">Definition of boundary layer profile</a></li>
+<li class="toc-entry toc-h2"><a href="#boundary-layer-thickness">Boundary layer thickness</a></li>
+<li class="toc-entry toc-h2"><a href="#some-definitions">Some definitions</a></li>
 </ul>
 </li>
 </ul>
@@ -107,42 +118,94 @@
   <li>We use dimensional analysis to reduce the number of variables we need to experimentally consider.</li>
 </ul>
 
-<h2 id="table-test">Table Test</h2>
+<h1 id="the-boundary-layer-concept-prandtl">The boundary layer concept (prandtl)</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>a</th>
-      <th>b</th>
-      <th>c</th>
-      <th>d</th>
-      <th>e</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>f</td>
-      <td>g</td>
-      <td>h</td>
-      <td>i</td>
-      <td>j</td>
-    </tr>
-    <tr>
-      <td>a</td>
-      <td>s</td>
-      <td>f</td>
-      <td>g</td>
-      <td>h</td>
-    </tr>
-    <tr>
-      <td>s</td>
-      <td>d</td>
-      <td>g</td>
-      <td>h</td>
-      <td>j</td>
-    </tr>
-  </tbody>
-</table>
+<ul>
+  <li>In the flow past an airfoil, vicsous effecrts are mainly confined to a thin layer close to the surface of the airfoil (the boundary layer) and its wake.</li>
+  <li>The BL is dominated by viscocity while the outer region can be considered inviscid</li>
+</ul>
+
+<h2 id="origin-of-boundary-layer">Origin of boundary layer</h2>
+
+<h3 id="no-slip-condition">No-slip condition</h3>
+
+<ul>
+  <li>
+    <p>At a solid boundary, the fluid will have zeo velocity relative to the boundary. Molecules of fluid right at the surface stick to the surface as flow moves past.</p>
+  </li>
+  <li>
+    <p>The flow around a body is determiedn by the action of viscosity in a thing later in th eimmediate vicinity of the body surface.</p>
+  </li>
+  <li>
+    <p>In this thin layer, fluid velocity increases from zero at the wall to the external flow value, where viscosity may be ignored.</p>
+  </li>
+  <li>
+    <p>Even thought viscosity may be small, the shear stress will still be large near the wall, because of the large velocity gradient.</p>
+  </li>
+</ul>
+
+<h2 id="definition-of-boundary-layer-profile">Definition of boundary layer profile</h2>
+
+<ul>
+  <li>
+    <p>A boundary layer profile is a plot of streamwise velocity, U, against perpendicular wall distance, y. The boundary layer charecteristics are very sensistive to the shape of the profile.</p>
+  </li>
+  <li>
+    <p>A comparison between two profile shapes is best made by using nondimensional profiles. In these profiles $U_1$ is the freestream velocity and $\delta_{99}$ is the 99% boundary layer thickness (defined as the point where the velocity reaches 99% of the freestream value).</p>
+  </li>
+</ul>
+
+<h2 id="boundary-layer-thickness">Boundary layer thickness</h2>
+
+<ul>
+  <li>The boundary layert thickness grows as the flow proceeds over the body, as more flow is affected by fluid friction as the flow proceeds over a body.</li>
+  <li>There are different ways to define a boundary layer
+    <ul>
+      <li><strong>Physical Thickness:</strong> 99% thickness, $\delta_{99}$, is the wall distance where velocity reaches 99% of the freestream value.</li>
+      <li><strong>Displacment Thickness:</strong> Displacment thickness, $\delta^*$ is the distance that the external streamlines of the outer potential flow are shifted due to presence of the boundary layer.
+        <ul>
+          <li>Same mass flow rate would occur for frictionless flow if boundary was moved out by $\delta^*$</li>
+        </ul>
+      </li>
+      <li><strong>Momentum thickness:</strong> Thickness of freestream fluid with same momentum as the momentum defect due to the boundary layer</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="some-definitions">Some definitions</h2>
+
+<ul>
+  <li>Viscosity is responsible for the formation of shear stress $\tau = {\mu \partial u /\partial y}$</li>
+  <li>$\mu$ is the coefficient of <strong>dynamic</strong> viscosity and v is the coefficient of <strong>kinematic</strong> viscosity: $v = \mu/\rho$</li>
+  <li>Viscosity is a physical property of a fluid and it varies differently for gases and fluids
+    <ul>
+      <li>Variation with T
+        <ul>
+          <li>Liquids $\mu$ decreases as T increases</li>
+          <li>Gases $\mu$ increases as T increases.</li>
+          <li>For air at sea level conditions: $\mu = 1.7894 \times 10^{-5} kg/(m\cdot s)$ and $v = 1.4607 \times 10^{-5} m^2/s$</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Reynolds number is a measure of the ratio of inertial forces to viscous forces</li>
+</ul>
+
+\[Re = {
+	{\rho_{\infty} V_{\infty} L} 
+\over 
+\mu_{\infty}
+} 
+= 
+{
+{V_{\infty} L} 
+\over 
+v_\infty
+}\]
+
+<ul>
+  <li>Exact similtude will only exist between a wind tunnel model, CFD analysis and a real aircraft at the same Re.</li>
+</ul>
 
   </div><a class="u-url" href="/notes/AerospaceEngineering/Computational%20and%20High-Speed%20Aerodynamics.html" hidden></a>
 </article>

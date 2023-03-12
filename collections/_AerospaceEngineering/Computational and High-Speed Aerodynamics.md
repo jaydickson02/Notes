@@ -72,7 +72,17 @@ toc: true
 - Reynolds number is a measure of the ratio of inertial forces to viscous forces
 
 $$
-Re = {{\rho_{\infty V_{\infty} L}} \over \mu_{\infty}} = {{V_{\infty} L} \over v_{\infty}}
+Re = {
+	{\rho_{\infty} V_{\infty} L} 
+\over 
+\mu_{\infty}
+} 
+= 
+{
+{V_{\infty} L} 
+\over 
+v_\infty
+}
 $$
 
 - Exact similtude will only exist between a wind tunnel model, CFD analysis and a real aircraft at the same Re.
