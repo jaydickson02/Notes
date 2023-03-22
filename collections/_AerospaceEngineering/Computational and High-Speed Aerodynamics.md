@@ -4,7 +4,7 @@ title:  "Computational and High-Speed Aerodynamics"
 toc: true
 ---
 
-# Lecture 1 - Review of Aerodynamic Concepts
+# Review of Aerodynamic Concepts
 
 ## Physical Quantities
 
@@ -56,7 +56,7 @@ toc: true
 - The boundary layert thickness grows as the flow proceeds over the body, as more flow is affected by fluid friction as the flow proceeds over a body.
 - There are different ways to define a boundary layer
 	- **Physical Thickness:** 99% thickness, $\delta_{99}$, is the wall distance where velocity reaches 99% of the freestream value.
-	- **Displacment Thickness:** Displacment thickness, $\delta^*$ is the distance that the external streamlines of the outer potential flow are shifted due to presence of the boundary layer.
+	- **Displacment Thickness:** Displacment thickness, $\delta^{star}$ is the distance that the external streamlines of the outer potential flow are shifted due to presence of the boundary layer.
 		- Same mass flow rate would occur for frictionless flow if boundary was moved out by $\delta^*$
 	- **Momentum thickness:** Thickness of freestream fluid with same momentum as the momentum defect due to the boundary layer
 
@@ -177,13 +177,13 @@ The other options are also partially correct. Modern aircraft do have increasing
 ## Naiver Stokes Equations
 
 - Most complete mathematical model describing the flow of a fluid.
+### Typical version of the equation:
+$$
+\nabla \cdot u = 0 \quad \textrm{Conservation of Mass}
+$$
 
 $$
-\nabla \cdot u = 0
-$$
-
-$$
-\rho {du \over dt} = {- \nabla p + \mu \nabla ^2 u + F}
+\rho {du \over dt} = {- \nabla p + \mu \nabla ^2 u + F} \quad \textrm{Newtons Second Law}
 $$
 
 ### Continuity equation
@@ -274,5 +274,5 @@ $$
 $$
 
 - So term one is the mass flow, term two is the net flow in the x direction, term two is the net flow in the y direction and term 3 is the net flow in the z direction. We know all these need to sum to 0 because the need to balance for mass conservation.
-- This assumes incompressability so constant density $\rho$
+- This assumes incompressability so constant density $\rho$, the equation as first stated above considered compressible flow effects.
 
