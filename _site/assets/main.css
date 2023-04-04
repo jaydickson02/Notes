@@ -715,10 +715,6 @@ table .spacer {
   background-color: var(--spacerColour) !important;
 }
 
-.post-content {
-  width: 100%;
-  overflow: auto;
-}
 .post-content h1 {
   font-size: 32px;
 }
@@ -751,6 +747,9 @@ table .spacer {
   /*display: none;*/
 }
 
+.SubjectTable {
+  width: 99%;
+}
 .SubjectTable a {
   font-size: 14px;
 }
@@ -762,10 +761,8 @@ table .spacer {
   font-size: 95%;
   margin-bottom: 1em;
   padding: 20px;
-  width: 92%;
-}
-.table-of-contents ul {
-  list-style: none; /* Remove default bullets */
+  width: 92% ul;
+  width-list-style: none; /* Remove default bullets */
 }
 .table-of-contents ul li::before {
   content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -803,6 +800,11 @@ table .spacer {
 .site-nav {
   background: var(--header-color);
   border: none;
+}
+
+.MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

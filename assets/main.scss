@@ -116,9 +116,6 @@ table {
         margin-left: -1em; /* Also needed for space (tweak if needed) */
       }
 
-      width: 100%;
-      overflow: auto;
-
 }
 
 .site-nav {
@@ -129,7 +126,7 @@ table {
     a {
         font-size: 14px;
     }
-    width: 100%;
+    width: 99%;
 }
 
 
@@ -141,7 +138,7 @@ table {
     font-size: 95%;
     margin-bottom: 1em;
     padding: 20px;
-    width: 92%;
+    width: 92%
 
     ul {
         list-style: none; /* Remove default bullets */
@@ -188,4 +185,9 @@ table {
 .site-nav {
     background: var(--header-color);
     border: none;
+}
+
+.MathJax_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
