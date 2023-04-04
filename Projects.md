@@ -11,7 +11,7 @@ title:  "Projects"
 {% if pdf.path contains 'assets/projects/' %}
 <div>
 <li>
-<a href="{{ pdf.path }}" alt="project file">{{ pdf.name }}</a>
+<a target="_blank" href="{{ pdf.path }}" alt="project file">{{ pdf.name }}</a>
 </li>
 </div>
 {% endif %}
