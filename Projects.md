@@ -9,7 +9,7 @@ title:  "Projects"
 {% for pdf in site.static_files %}
 {% if pdf.path contains 'assets/projects/' %}
 <li>
-<a href="/notes/{{ pdf.path }}" alt="project file">{{ pdf.name }}</a>
+<a href="{{ pdf.path }}" alt="project file">{{ pdf.name }}</a>
 </li>
 {% endif %}
 {% endfor %}
