@@ -715,6 +715,10 @@ table .spacer {
   background-color: var(--spacerColour) !important;
 }
 
+.post-content {
+  width: 100%;
+  overflow: auto;
+}
 .post-content h1 {
   font-size: 32px;
 }
@@ -758,7 +762,7 @@ table .spacer {
   font-size: 95%;
   margin-bottom: 1em;
   padding: 20px;
-  width: 100%;
+  width: 92%;
 }
 .table-of-contents ul {
   list-style: none; /* Remove default bullets */
