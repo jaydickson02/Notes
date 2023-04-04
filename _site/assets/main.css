@@ -791,7 +791,7 @@ table .spacer {
 .projectlist div {
   display: inline-block !important;
   border: 1px solid var(--light-text-color);
-  width: 100%;
+  width: 95%;
   padding: 2%;
   margin-bottom: 4px;
 }
