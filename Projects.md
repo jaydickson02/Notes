@@ -3,7 +3,18 @@ layout: default
 title:  "Projects"
 ---
 
+
 <div>
+<ul>
+{% for pdf in site.static_files %}
+{% if pdf.path contains 'assets/projects/' %}
+<li>
+<a href="/notes/{{ pdf.path }}" alt="project file">{{ pdf.name }}</a>
+</li>
+{% endif %}
+{% endfor %}
+</ul>
+
 <h1>Projects</h1>
 <ul class="projectlist">
 
