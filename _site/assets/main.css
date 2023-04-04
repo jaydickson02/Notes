@@ -796,4 +796,9 @@ table .spacer {
   margin-bottom: 4px;
 }
 
+.site-nav {
+  background: var(--header-color);
+  border: none;
+}
+
 /*# sourceMappingURL=main.css.map */
