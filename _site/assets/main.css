@@ -746,6 +746,11 @@ table .spacer {
 .site-nav {
   /*display: none;*/
 }
+.site-nav a {
+  display: inline !important;
+  padding: 6px !important;
+  margin: 0px !important;
+}
 
 .SubjectTable {
   width: 99%;
@@ -754,6 +759,12 @@ table .spacer {
   font-size: 14px;
 }
 
+@media screen and (max-width: 600px) {
+  .site-nav {
+    position: absolute;
+    top: 0px;
+  }
+}
 .table-of-contents {
   background: var(--toc-background-color) none repeat scroll 0 0;
   border: 1px solid #aaa;
@@ -761,19 +772,8 @@ table .spacer {
   font-size: 95%;
   margin-bottom: 1em;
   padding: 20px;
-  width: 92% ul;
-  width-list-style: none; /* Remove default bullets */
-}
-.table-of-contents ul li::before {
-  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: rgb(64, 90, 168); /* Change the color */
-  font-weight: bold; /* If you want it to be bold */
-  display: inline-block; /* Needed to add space between the bullet and the text */
-  width: 1em; /* Also needed for space (tweak if needed) */
-  margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-.table-of-contents a {
-  color: var(--light-text-color) !important;
+  width: 92% a;
+  width-color: var(--light-text-color) !important;
 }
 
 .toc-title {
