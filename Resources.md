@@ -6,7 +6,8 @@ title:  "Resources"
 <h1>Resources</h1>
 
 <div>
-<ul class="Projectlist">
+<h2>Text Books</h2>
+<ul class="projectlist">
 {% for resource in site.static_files %}
 {% if resource.path contains 'assets/resources/Textbooks' %}
 <div>
@@ -20,7 +21,8 @@ title:  "Resources"
 </div>
 
 <div>
-<ul class="Projectlist">
+<h2>References</h2>
+<ul class="projectlist">
 {% for resource in site.static_files %}
 {% if resource.path contains 'assets/resources/References' %}
 <div>
@@ -34,7 +36,8 @@ title:  "Resources"
 </div>
 
 <div>
-<ul class="Projectlist">
+<h2>Papers</h2>
+<ul class="projectlist">
 {% for resource in site.static_files %}
 {% if resource.path contains 'assets/resources/Papers' %}
 <div>
