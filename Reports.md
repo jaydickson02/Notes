@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Projects"
+title:  "Reports"
 ---
 
 <h1>Projects</h1>
