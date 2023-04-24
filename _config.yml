@@ -32,6 +32,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-toc
+  - jekyll-seo-tag
 markdown: kramdown
     
 kramdown:
